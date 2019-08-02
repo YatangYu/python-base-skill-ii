@@ -34,6 +34,28 @@
 
 以上是例題的講解，在python裡，我們想要改變一個變數的Type只要用那種Type的名稱加上括弧(如<mark>int()</mark>)就可以了。
 
+<h2>list</h2>
+<pre>  我們知道了，變數的定義方式，而每一個變數都存有一個資訊，那如果今天有好幾筆資料要記錄，我們總不可能創造幾百、或甚至上千個不同名字的變數來用吧!
+於是，這邊跟大家介紹一種比較複雜的Type:"<mark>list</mark>"，請大家看下面的code:
+
+<b>a=[0,1,2]
+print(a)
+a.append(3)
+print(a)</b>
+
+執行的結果會是:
+
+<b>[0, 1, 2]
+[0, 1, 2, 3]</b>
+
+  list的定義方式如上面第一行程式碼，以<mark>"[]"</mark>將所有資料包起來，每個資料以<mark>","</mark>隔開。
+第二行程式碼<mark>"append"</mark>可以在list的尾部加上一個新的資料，以上面例子來說，a最後會是 <mark>[0,1,2,3]</mark> 。
+
+  由list存起來的每個資料都有編號，如<mark>"a(0)"</mark>就會是a裡面的第0個元素<mark>0</mark>
+
+
+以上是關於list的教學，只要能善用list，我們就能有系統的存下一大筆資料了。
+
 <h2>判別</h2>
 <pre>  寫程式時可以提供條件，讓電腦判斷，如果條件成立就執行某動作。
 比如我想做一個簡單的互動，讓我們可以輸入一個數字給電腦判別是不是7的倍數，如果是，就印個"yes"出來，就可以寫code:
@@ -67,11 +89,11 @@ else:
 
 <b>a=int(input("請輸入要判別的數字:"))
 if a>0:
-	print(a, " is positive")
+	print(a, "is positive")
 elif a<0:
-	print(a, " is negative")
+	print(a, "is negative")
 else:
-	print(a, " is zero")
+	print(a, "is zero")
 </b>
 
   這裡的程式碼讓我們可以輸入一個數字，而電腦會告訴我們數字是正的、負的、或是0。另外，請大家注意if跟elif的判別條件不一定要將事件一分為二，
@@ -79,16 +101,21 @@ else:
 
 <b>a=int(input("請輸入要判別的數字:"))
 if a%7 == 0:
-	print(a, " is a multiple of 7")
+	print(a, "is a multiple of 7")
 elif a%3 == 0:
-	print(a, " is a multiple of 3")
+	print(a, "is a multiple of 3")
 else:
-	print(a, " is nothing")
+	print(a, "is nothing")
 </b>
+
+  這個程式，可以讓電腦告訴我們輸入的數字是7的倍數、3的倍數還是都不是。妳可以試試看輸入<mark>21</mark>讓電腦判斷，結果會是<mark>7的倍數</mark>；
+但我們知道<mark>21</mark>也是<mark>3的倍數</mark>，然而卻不會顯示出來，是因為電腦在判別到if裡的條件成立後，就不會再判別elif的條件了。
 
 </pre>
 
-<h2>for loop</h2>
+<h2>loop(迴圈)</h2>
+
+<h3>for</h3>
 <pre>  有時候我們要做重複的事情很多很多次，這時候，就可以用迴圈的寫法減少程式碼。
 比如要算<mark>5!</mark>，你可能會寫code:
 <b>ans=1*2*3*4*5</b>
@@ -97,7 +124,7 @@ else:
 這種情況，我們就可以用code:
 <b>ans=1
 for i in range(1,21):
-	ans=ans*(i)
+	ans=ans*i
 </b>
 這樣ans就會是20!:
 <b>2432902008176640000</b>
@@ -109,19 +136,30 @@ for loop的寫法:
 <mark>r:想要做的次數
 i:i變數會從0一路增加到(r-1)，並且持續重複迴圈裡的動作，故一共會重複r次動作
 actions:要做的動作
+  range也可以設定想做的區間，如range(1,20)就會使i從1跑到(20-1)
 </mark>
 </pre>
-<h3>indentation</h3>
-<pre>  indentation(中文叫縮排)是寫python
-在撰寫python程式時，迴圈、判別等程式會以<mark>":"</mark>表示在":"的這一行，後，下一行的程式碼
+
+<h3>while</h3>
+<pre>  除了for loop以外，還有一個while loop，while是結合for與if而成的迴圈，請看code:
+
+<b>b=10
+while b>=0:
+	b=b-1
+print("b=", b)</b>
+
+執行這段程式碼，會看到:
+
+<b>b= -1</b>
+
+由範例我們可以知道，b=b-1這行程式碼被執行了11次，b才會從原本的10變成-1，也因-1已經不符合b>=0的條件而脫離了這個迴圈。
+
+
+<h3>indentation(縮排)</h3>
+<pre>  不知道大家有沒有注意到，前面的if,else,for等在設定完條件後會有一個":"，而對於符合條件下我們要執行的程式碼，
+是把它放在下一行且開頭要加"tab"，這就是縮排。寫python時，要把符合條件要執行的程式碼都加一個"tab"，代表這些程式碼是被包在這個迴圈或判別下。
+  (常常程式出bug都是因為沒縮排的問題)
 </pre>
-
-
-
-
-<h2>while loop</h2>
-
-<h2>list</h2>
 
   </body>
 </html>
