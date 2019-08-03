@@ -70,7 +70,7 @@ if的寫法:
 <b>if judge:
 	actions</b>
 
-<mark>judge:判斷的條件
+<mark>judge:判斷的條件 (要判斷左右相等時中間要兩個 "=" ，另外也可以用 "and", "or" 考慮複數條件)
 actions:條件成立時要做的事</mark></pre>
 
 <h3>else & elif</h3>
@@ -138,6 +138,20 @@ i:i變數會從0一路增加到(r-1)，並且持續重複迴圈裡的動作，�
 actions:要做的動作
   {range也可以設定想做的區間，如range(1,20)就會使i從1跑到(20-1)}</mark></pre>
 
+<h3>break</h3>
+<pre>  在迴圈裡可以用break強制跳出迴圈，看到下面code:
+
+<b>for i in range(1,11):
+	print(i)
+	break</b>
+
+  原本for loop應該會從1跑到10，所以應該1~10都被印出來，但因為加了 <mark>break</mark> 所以只印了 1 就跳出迴圈。
+結合 if 與 break 可以讓迴圈更有彈性，參考code:
+<b>for i in range(1,11):
+	print(i)
+	if(i == 5):
+		break</b>
+
 <h3>while</h3>
 <pre>  除了for loop以外，還有一個while loop，<mark>while是結合for與if而成</mark>的迴圈，請看code:
 
@@ -151,7 +165,7 @@ print("b=", b)</b>
 <b>b= -1</b>
 
 由範例我們可以知道，<mark>b=b-1這行程式碼被執行了11次</mark>，b才會從原本的 10 變成 -1 ，也因 <mark>-1</mark> 已經<mark>不符合b>=0</mark>的條件而脫離了這個迴圈。</pre>
-
+	
 <h3>indentation(縮排)</h3>
 <pre>  不知道大家有沒有注意到，前面的if,else,for等在設定完條件後會有一個<mark>":"</mark>，而對於符合條件下我們要執行的程式碼，
 是把它放在下一行且開頭要加"tab"，這就是縮排。
@@ -159,14 +173,15 @@ print("b=", b)</b>
   <mark>(常常程式出bug都是因為沒縮排的問題)</mark>
 
   下面給大家參考縮排正確的程式碼:
-  <b>a=[]
-for i in range(0,10):
-    a.append([])
-    for j in range(0,10):
-        b=i*j
-        print(i,"x",j,"=",b)
-        a[i].append(b)
-print(a[8][7])</b>
-</pre>
+<b>#九九乘法表
+a=[]  #預備作為存兩數相乘結果的list
+for i in range(0,10):  #被乘數從0到9
+    a.append([])  #在a裡建造list使其成為二維的儲存形式
+    for j in range(0,10):  #乘數從0到9
+        b=i*j  #b為積
+        a[i].append(b)  #把積加入以i為乘數的list裡
+        if i>0 and j>0:  #99乘法表不需要印0
+        		print(i,"x",j,"=",b)  #印出99乘法表
+print(a[int(input("請輸入被乘數"))][int(input("請輸入乘數"))])  #輸入乘數、被乘數，由a中得到積</b></pre>
   </body>
 </html>
