@@ -62,13 +62,13 @@ print(a[0])</b>
 比如我想做一個簡單的互動，讓我們可以輸入一個數字給電腦判別是不是7的倍數，如果是，就印個"yes"出來，就可以寫code:
 <b>a=int(input("請輸入要判別的數字:"))
 if a%7 == 0:
-	print("yes")
+    print("yes")
 </b>
 這樣我們就可以在執行視窗裡做到輸入數字，而當它除以7的餘數是零(也就是整除，如7777,8904)，電腦就會執行<mark>print("yes")</mark>程式碼，而在執行視窗印出"yes"。
 
 if的寫法:
 <b>if judge:
-	actions</b>
+    actions</b>
 
 <mark>judge:判斷的條件 (要判斷左右相等時中間要兩個 "=" ，另外也可以用 "and", "or" 考慮複數條件)
 actions:條件成立時要做的事</mark></pre>
@@ -80,34 +80,31 @@ actions:條件成立時要做的事</mark></pre>
 
 <b>a=int(input("請輸入要判別的數字:"))
 if a%7 == 0:
-	print("yes")
+    print("yes")
 else:
-	print("no")
-</b>
+    print("no")</b>
 
   在原先的程式碼後面再加入<mark>else</mark>以及要做的動作，就可以讓程式再條件未成立時執行else內的程式碼。
 另外如果有些情況需要把事件做更多分岔，我們就可以用<mark>elif(else if)</mark>的方式，比如下面的code:
 
 <b>a=int(input("請輸入要判別的數字:"))
 if a>0:
-	print(a, "is positive")
+    print(a, "is positive")
 elif a<0:
-	print(a, "is negative")
+    print(a, "is negative")
 else:
-	print(a, "is zero")
-</b>
+    print(a, "is zero")</b>
 
   這裡的程式碼讓我們可以輸入一個數字，而電腦會告訴我們數字是正的、負的、或是0。
 另外，請大家注意if跟elif的判別條件不一定要將事件一分為二，他們是可以有交集的，請看以下code:
 
 <b>a=int(input("請輸入要判別的數字:"))
 if a%7 == 0:
-	print(a, "is a multiple of 7")
+    print(a, "is a multiple of 7")
 elif a%3 == 0:
-	print(a, "is a multiple of 3")
+    print(a, "is a multiple of 3")
 else:
-	print(a, "is nothing")
-</b>
+    print(a, "is nothing")</b>
 
   這個程式，可以讓電腦告訴我們輸入的數字是7的倍數、3的倍數還是都不是。妳可以試試看輸入<mark>21</mark>讓電腦判斷，結果會是<mark>7的倍數</mark>；
 但我們知道<mark>21</mark>也是<mark>3的倍數</mark>，然而卻不會顯示出來，是因為電腦在判別到if裡的條件成立後，就不會再判別elif的條件了。</pre>
@@ -123,15 +120,14 @@ else:
 
 <b>ans=1
 for i in range(1,21):
-	ans=ans*i
-</b>
+    ans=ans*i</b>
 
 這樣ans就會是20!:
 <b>2432902008176640000</b>
 
 for loop的寫法:
 <b>for i in range(r):
-	actions</b>
+    actions</b>
 
 <mark>r:想要做的次數
 i:i變數會從0一路增加到(r-1)，並且持續重複迴圈裡的動作，故一共會重複r次動作
@@ -142,22 +138,22 @@ actions:要做的動作
 <pre>  在迴圈裡可以用break強制跳出迴圈，看到下面code:
 
 <b>for i in range(1,11):
-	print(i)
-	break</b>
+    print(i)
+    break</b>
 
   原本for loop應該會從1跑到10，所以應該1~10都被印出來，但因為加了 <mark>break</mark> 所以只印了 1 就跳出迴圈。
 結合 if 與 break 可以讓迴圈更有彈性，參考code:
 <b>for i in range(1,11):
-	print(i)
-	if(i == 5):
-		break</b>
+    print(i)
+    if(i == 5):
+        break</b>
 
 <h3>while</h3>
 <pre>  除了for loop以外，還有一個while loop，<mark>while是結合for與if而成</mark>的迴圈，請看code:
 
 <b>b=10
 while b>=0:
-	b=b-1
+    b=b-1
 print("b=", b)</b>
 
 執行這段程式碼，會看到:
