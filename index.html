@@ -62,6 +62,7 @@ list的定義方式如上面第一行程式碼，以<mark>"[]"</mark>將所有�
 <h2>判別</h2>
 <pre>  寫程式時可以提供條件，讓電腦判斷，如果條件成立就執行某動作。
 比如我想做一個簡單的互動，讓我們可以輸入一個數字給電腦判別是不是7的倍數，如果是，就印個"yes"出來，就可以寫code:
+
 <b>a=int(input("請輸入要判別的數字:"))
 if a%7 == 0:
     print("yes")
@@ -145,11 +146,11 @@ actions:要做的動作
 
   原本for loop應該會從1跑到10，所以應該1~10都被印出來，但因為加了 <mark>break</mark> 所以只印了 1 就跳出迴圈。
 結合 if 與 break 可以讓迴圈更有彈性，參考code:
+
 <b>for i in range(1,11):
     print(i)
     if(i == 5):
-        break</b>
-
+        break</b></pre>
 <h3>while</h3>
 <pre>  除了for loop以外，還有一個while loop，<mark>while是結合for與if而成</mark>的迴圈，請看code:
 
@@ -163,7 +164,6 @@ print("b=", b)</b>
 <b>b= -1</b>
 
 由範例我們可以知道，<mark>b=b-1這行程式碼被執行了11次</mark>，b才會從原本的 10 變成 -1 ，也因 <mark>-1</mark> 已經<mark>不符合b>=0</mark>的條件而脫離了這個迴圈。</pre>
-	
 <h3>indentation(縮排)</h3>
 <pre>  不知道大家有沒有注意到，前面的if,else,for等在設定完條件後會有一個<mark>":"</mark>，而對於符合條件下我們要執行的程式碼，
 是把它放在下一行且開頭要加"tab"，這就是縮排。
