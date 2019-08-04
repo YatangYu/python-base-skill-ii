@@ -37,23 +37,25 @@
 <h2>list</h2>
 <pre>  我們知道了，變數的定義方式，而每一個變數都存有一個資訊，那如果遇到有好幾筆資料要記錄，
 我們總不可能用以往的方法創造好幾個不同名字的變數來用吧!
-於是，這邊跟大家介紹一種比較複雜的Type:"<mark>list</mark>"，請大家看下面的code:
+於是，這邊跟大家介紹一種比較複雜的Type:"<mark>list</mark>"，請大家執行看看下面的code:
 
 <b>a=[0,1,2]
-print(a)
+print("a =", a)
 a.append(3)
-print(a)
-print(a[0])</b>
+print("after append, a =", a)
+print("a[0] =", a[0])
+print("length of a =", len(a))</b>
 
 執行的結果會是:
 
-<b>[0, 1, 2]
-[0, 1, 2, 3]
-0</b>
+<b>a = [0, 1, 2]
+after append, a = [0, 1, 2, 3]
+a[0] = 0
+length of a = 4</b>
 
-  list的定義方式如上面第一行程式碼，以<mark>"[]"</mark>將所有資料包起來，每個資料以<mark>","</mark>隔開。
-  <mark>"append"</mark>可以在list的尾部加上一個新的資料，以上面例子來說，a最後會是 <mark>[0,1,2,3]</mark> 。
-  <mark>a[0]</mark>是一個變數，表示了a裡面的第0個元素。你可以把list想像成是一種有系統的定義變數方式，list內的每一個元素都是一個變數。
+list的定義方式如上面第一行程式碼，以<mark>"[]"</mark>將所有資料包起來，每個資料以<mark>","</mark>隔開。
+<mark>"append"</mark>可以在list的尾部加上一個新的資料，以上面例子來說，a最後會是 <mark>[0,1,2,3]</mark> 。
+<mark>a[0]</mark>是一個變數，表示了a裡面的第0個元素。你可以把list想像成是一種有系統的定義變數方式，list內的每一個元素都是一個變數。
 
 以上是關於list的教學，只要能善用list，我們就能有系統的存下一大筆資料了。</pre>
 
